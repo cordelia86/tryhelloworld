@@ -19,7 +19,7 @@ class Poll(models.Model):
     area = models.CharField(max_length=5)
 
     def __str__(self):
-        return self.pk
+        return self.area
 
 
 class Choice(models.Model):
@@ -28,4 +28,4 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.pk
+        return self.candidate.name
